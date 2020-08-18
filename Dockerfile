@@ -28,3 +28,5 @@ FROM runtime
 
 COPY --from=build /usr/local/bin/XSB /usr/local/bin/XSB
 COPY --from=build /usr/local/bin/xsb-3.8.0 /usr/local/bin/xsb-3.8.0
+ENV PATH="/usr/local/bin/XSB/bin:${PATH}"
+ENTRYPOINT xsb
